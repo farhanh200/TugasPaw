@@ -189,7 +189,7 @@ button:hover {
   margin-top: 500px;
 }
 button::after {
-  content: "▼";
+  content: "";
   font-size: 18px;
 }
 .awan {
