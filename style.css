@@ -441,34 +441,3 @@ button::after {
     font-size: 14px;
   }
 }
-
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-content a:hover {
-  background-color: #99bc85;
-}
-/* Dropdown Default (Tersembunyi) */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #222;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-}
-
-/* Style untuk Link Dropdown */
-.dropdown-content a {
-  color: white;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-/* Saat Link Diklik */
-.dropdown-content a:hover {
-  background-color: #99bc85;
-}

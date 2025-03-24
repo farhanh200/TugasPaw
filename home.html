@@ -4,72 +4,139 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lapisan Bumi</title>
+    <link rel="icon" href="img/earth.png" type="imagr/icon" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="home.css" />
-    <link rel="icon" href="img/earth.png" type="imagr/icon" />
   </head>
   <body class="bg-gray-100 text-gray-900">
-    <!-- Header -->
-    <header>
-      <a id="navbar" href="#">
-        <img src="img/earth.png" alt="Logo" class="navbar-logo" />
+    <header class="flex items-center justify-between bg-gray-900 p-4 relative">
+      <!-- Logo -->
+      <a href="#" class="flex items-center">
+        <img src="img/earth.png" alt="Logo" class="w-10 h-10" />
       </a>
-      <nav class="navigation">
-        <a href="home.html" class="active">Home</a>
-        <a href="index.html">Lapisan Bumi</a>
-        <div class="dropdown">
-          <a href="Evaluasi/evaluasi.html" id="dropdown-btn" class="dropbtn"
-            >Other</a
+
+      <!-- Navigation Menu -->
+      <nav class="hidden md:flex items-center gap-6 text-green-400">
+        <a href="home.html" class="bg-green-500 text-white px-4 py-2 rounded-lg"
+          >Home</a
+        >
+        <a href="index.html" class="hover:text-white px-4 py-2 rounded-lg"
+          >Lapisan Bumi</a
+        >
+
+        <!-- Dropdown Other -->
+        <div class="relative group">
+          <button
+            class="hover:text-white bg-green-500 text-white px-4 py-2 rounded-lg flex items-center"
           >
-          <div class="dropdown-content" id="dropdown-menu">
-            <a href="minigame/">Mini Game</a>
-            <a href="quiz/">Quiz</a>
+            Other
+          </button>
+          <div
+            class="absolute hidden group-hover:flex flex-col bg-gray-800 text-white mt-2 w-32 rounded-lg shadow-lg space-y-2 p-2"
+          >
+            <a
+              href="minigame/"
+              class="block px-4 py-2 hover:bg-gray-700 rounded"
+              >Mini Game</a
+            >
+            <a href="quiz/" class="block px-4 py-2 hover:bg-gray-700 rounded"
+              >Quiz</a
+            >
           </div>
         </div>
-        <a href="nama.html">About us</a>
+
+        <a href="nama.html" class="hover:text-white">About us</a>
       </nav>
+
+      <!-- Mobile Menu Button -->
+      <button id="menu-btn" class="md:hidden text-green-400 focus:outline-none">
+        ☰
+      </button>
+
+      <!-- Mobile Menu -->
+      <div
+        id="mobile-menu"
+        class="hidden absolute top-16 left-0 w-full bg-gray-900 flex flex-col items-center gap-4 p-4 text-green-400"
+      >
+        <a href="home.html" class="hover:text-white">Home</a>
+        <a
+          href="index.html"
+          class="bg-green-500 text-white px-4 py-2 rounded-lg"
+          >Lapisan Bumi</a
+        >
+
+        <!-- Dropdown Other di Mobile -->
+        <div class="flex flex-col items-center">
+          <button
+            id="dropdown-btn"
+            class="hover:text-white bg-green-500 text-white px-4 py-2 rounded-lg flex items-center"
+          >
+            Other ▼
+          </button>
+          <div
+            id="dropdown-menu"
+            class="hidden flex flex-col gap-2 mt-2 space-y-2"
+          >
+            <a
+              href="minigame/"
+              class="block px-4 py-2 bg-gray-800 text-white rounded hover:bg-gray-700 w-full text-center"
+              >Mini Game</a
+            >
+            <a
+              href="quiz/"
+              class="block px-4 py-2 bg-gray-800 text-white rounded hover:bg-gray-700 w-full text-center"
+              >Quiz</a
+            >
+          </div>
+        </div>
+
+        <a href="nama.html" class="hover:text-white">About us</a>
+      </div>
     </header>
-    <section class="relative">
-      <img
-        src="img/awan (2).png"
-        alt="Awan 1"
-        class="awan absolute top-10 left-20 w-32"
-      />
-      <img
-        src="img/awan (2).png"
-        alt="Awan 2"
-        class="awan absolute top-16 left-60 w-36"
-      />
-      <img
-        src="img/awan (2).png"
-        alt="Awan 3"
-        class="awan absolute top-12 right-40 w-32"
-      />
-      <img
-        src="img/awan (2).png"
-        alt="Awan 4"
-        class="awan absolute top-20 right-10 w-40"
-      />
-    </section>
-    <img src="img/matahari (2).png" class="sun" id="sun" alt="Matahari" />
-    <div class="container">
-      <div class="card">
-        <h1>🌍 Jelajahi Misteri Lapisan Bumi!</h1>
-        <p>
+
+    <script>
+      document
+        .getElementById("menu-btn")
+        .addEventListener("click", function () {
+          document.getElementById("mobile-menu").classList.toggle("hidden");
+        });
+
+      document
+        .getElementById("dropdown-btn")
+        .addEventListener("click", function () {
+          document.getElementById("dropdown-menu").classList.toggle("hidden");
+        });
+    </script>
+
+    <div class="container mx-auto flex justify-center mt-10 px-4">
+      <div
+        class="bg-yellow-400 text-gray-900 p-6 rounded-lg shadow-lg max-w-screen-lg w-full"
+      >
+        <h1 class="text-2xl font-bold text-center">
+          🌍 Jelajahi Misteri Lapisan Bumi!
+        </h1>
+        <p class="mt-4 text-lg leading-relaxed text-justify">
           Bumi yang kita pijak memiliki struktur luar biasa! Dari
-          <strong>kerak bumi</strong> tempat kita hidup, hingga
-          <strong>inti bumi</strong> yang sangat panas, setiap lapisan memiliki
-          peran penting dalam menjaga keseimbangan planet ini.
+          <strong class="font-semibold">kerak bumi</strong> tempat kita hidup,
+          hingga <strong class="font-semibold">inti bumi</strong> yang sangat
+          panas, setiap lapisan memiliki peran penting dalam menjaga
+          keseimbangan planet ini.
         </p>
-        <p>
+        <p class="mt-4 text-lg leading-relaxed text-justify">
           Di website ini, kita akan menyelami lebih dalam
-          <strong>rahasia lapisan bumi</strong>. Siapkah kamu untuk
-          menjelajahinya dan menemukan fakta menarik tentang tempat tinggal
-          kita?
+          <strong class="font-semibold">rahasia lapisan bumi</strong>. Siapkah
+          kamu untuk menjelajahinya dan menemukan fakta menarik tentang tempat
+          tinggal kita?
         </p>
-        <a href="index.html" class="bottom">Mulai Belajar</a>
+        <div class="flex justify-center">
+          <a
+            href="index.html"
+            class="inline-block bg-green-600 text-white px-6 py-3 mt-6 rounded-lg text-lg font-semibold shadow hover:bg-green-700 transition"
+          >
+            Mulai Belajar
+          </a>
+        </div>
       </div>
     </div>
-    <script src="home.js"></script>
   </body>
 </html>
