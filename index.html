@@ -9,27 +9,105 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body class="bg-gray-100 text-gray-900">
-    <!-- Header -->
-    <header>
-      <a id="navbar" href="#">
-        <img src="img/earth.png" alt="Logo" class="navbar-logo" />
+    <header class="flex items-center justify-between bg-gray-900 p-4 relative">
+      <!-- Logo -->
+      <a href="#" class="flex items-center">
+        <img src="img/earth.png" alt="Logo" class="w-10 h-10" />
       </a>
 
-      <nav class="navigation">
-        <a href="home.html">Home</a>
-        <a href="index.html" class="active">Lapisan Bumi</a>
-        <div class="dropdown">
-          <a href="Evaluasi/evaluasi.html" id="dropdown-btn" class="dropbtn"
-            >Other</a
+      <!-- Navigation Menu -->
+      <nav class="hidden md:flex items-center gap-6 text-green-400">
+        <a href="home.html" class="hover:text-white">Home</a>
+        <a
+          href="index.html"
+          class="bg-green-500 text-white px-4 py-2 rounded-lg"
+          >Lapisan Bumi</a
+        >
+
+        <!-- Dropdown Other -->
+        <div class="relative group">
+          <button
+            class="hover:text-white bg-green-500 text-white px-4 py-2 rounded-lg flex items-center"
           >
-          <div class="dropdown-content" id="dropdown-menu">
-            <a href="minigame/">Mini Game</a>
-            <a href="quiz/">Quiz</a>
+            Other ▼
+          </button>
+          <div
+            class="absolute hidden group-hover:flex flex-col bg-gray-800 text-white mt-2 w-32 rounded-lg shadow-lg space-y-2 p-2"
+          >
+            <a
+              href="minigame/"
+              class="block px-4 py-2 hover:bg-gray-700 rounded"
+              >Mini Game</a
+            >
+            <a href="quiz/" class="block px-4 py-2 hover:bg-gray-700 rounded"
+              >Quiz</a
+            >
           </div>
         </div>
-        <a href="nama.html">About us</a>
+
+        <a href="nama.html" class="hover:text-white">About us</a>
       </nav>
+
+      <!-- Mobile Menu Button -->
+      <button id="menu-btn" class="md:hidden text-green-400 focus:outline-none">
+        ☰
+      </button>
+
+      <!-- Mobile Menu -->
+      <div
+        id="mobile-menu"
+        class="hidden absolute top-16 left-0 w-full bg-gray-900 flex flex-col items-center gap-4 p-4 text-green-400"
+      >
+        <a href="home.html" class="hover:text-white">Home</a>
+        <a
+          href="index.html"
+          class="bg-green-500 text-white px-4 py-2 rounded-lg"
+          >Lapisan Bumi</a
+        >
+
+        <!-- Dropdown Other di Mobile -->
+        <div class="flex flex-col items-center">
+          <button
+            id="dropdown-btn"
+            class="hover:text-white bg-green-500 text-white px-4 py-2 rounded-lg flex items-center"
+          >
+            Other ▼
+          </button>
+          <div
+            id="dropdown-menu"
+            class="hidden flex flex-col gap-2 mt-2 space-y-2"
+          >
+            <a
+              href="minigame/"
+              class="block px-4 py-2 bg-gray-800 text-white rounded hover:bg-gray-700 w-full text-center"
+              >Mini Game</a
+            >
+            <a
+              href="quiz/"
+              class="block px-4 py-2 bg-gray-800 text-white rounded hover:bg-gray-700 w-full text-center"
+              >Quiz</a
+            >
+          </div>
+        </div>
+
+        <a href="nama.html" class="hover:text-white">About us</a>
+      </div>
     </header>
+
+    <script>
+      document
+        .getElementById("menu-btn")
+        .addEventListener("click", function () {
+          document.getElementById("mobile-menu").classList.toggle("hidden");
+        });
+
+      document
+        .getElementById("dropdown-btn")
+        .addEventListener("click", function () {
+          document.getElementById("dropdown-menu").classList.toggle("hidden");
+        });
+    </script>
+
     <br /><br /><br /><br /><br />
     <!-- Selamat Datang Section -->
     <section class="text-center mt-10">
@@ -79,37 +157,51 @@
         basalt, sedangkan batuan penyusun kerak benua yang utama adalah granit,
         yang tidak sepadat batuan basalt.
       </p>
-      <div class="flex items-center justify-center min-h-screen">
-        <button
-          id="scrollButton1"
-          class="bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg"
-        >
-          40 km
-        </button>
-      </div>
-      <div class="batu">
-        <div class="batu1">
-          <img src="img/1_granit-removebg-preview.png" alt="Batu Granit" />
-          <p>Batu Granit</p>
+
+      <!-- Batuan -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center mb-10">
+        <div class="flex flex-col items-center">
+          <img
+            src="img/1_granit-removebg-preview.png"
+            alt="Batu Granit"
+            class="w-20 sm:w-24 md:w-32"
+          />
+          <p class="mt-2 text-lg font-semibold text-white">Batu Granit</p>
         </div>
-        <div class="batu2">
-          <img src="img/2_basalt-removebg-preview.png" alt="Batu basalt" />
-          <p>Batu Basalt</p>
+        <div class="flex flex-col items-center">
+          <img
+            src="img/2_basalt-removebg-preview.png"
+            alt="Batu Basalt"
+            class="w-20 sm:w-24 md:w-32"
+          />
+          <p class="mt-2 text-lg font-semibold text-white">Batu Basalt</p>
         </div>
-        <div class="batu3">
+        <div class="flex flex-col items-center">
           <img
             src="img/3_batuan_sendimen-removebg-preview.png"
             alt="Batu Sendimen"
+            class="w-20 sm:w-24 md:w-32"
           />
-          <p>Batu Sendimen</p>
+          <p class="mt-2 text-lg font-semibold text-white">Batu Sendimen</p>
         </div>
-        <div class="batu4">
+        <div class="flex flex-col items-center">
           <img
             src="img/4_batuan_metamorf-removebg-preview.png"
             alt="Batu Metamorf"
+            class="w-20 sm:w-24 md:w-32"
           />
-          <p>Batu Metamorf</p>
+          <p class="mt-2 text-lg font-semibold text-white">Batu Metamorf</p>
         </div>
+      </div>
+
+      <!-- Tombol Scroll -->
+      <div class="flex items-center justify-center">
+        <button
+          id="scrollButton1"
+          class="bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg hover:bg-green-700 transition duration-300"
+        >
+          40 km
+        </button>
       </div>
     </section>
 
@@ -122,36 +214,46 @@
         Astenosfer
       </h3>
       <p class="text-lg leading-relaxed text-white">
-        Astenosfer atau Asthenosphere, adalah lapisan di bawah litosfer dan
-        berada di atas mantel atas Bumi. Astenosfer merupakan lapisan yang
+        Astenosfer atau Asthenosphere, adalah lapisan di bawah litosfer dan
+        berada di atas mantel atas Bumi. Astenosfer merupakan lapisan yang
         terletak tepat di bawah litosfer dan menjadi bagian paling lunak dari
-        mantel atas. Lapisan ini berperan penting dalam pergerakan lempeng
-        tektonik serta penyesuaian isotatik. Astenosfer berada pada kedalaman
+        mantel atas. Lapisan ini berperan penting dalam pergerakan lempeng
+        tektonik serta penyesuaian isotatik. Astenosfer berada pada kedalaman
         sekitar 100 hingga 700 km di dalam Bumi, menjadikannya zona transisi
         yang memengaruhi dinamika geologis planet Bumi.
       </p>
-      <div class="flex items-center justify-center min-h-screen">
+
+      <!-- Batuan -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center mb-10">
+        <div class="flex flex-col items-center">
+          <img
+            src="img/1_peridotit-removebg-preview.png"
+            alt="Batu Peridotit"
+            class="w-20 sm:w-24 md:w-32"
+          />
+          <p class="mt-2 text-lg font-semibold text-white">Batu Peridotit</p>
+        </div>
+        <div class="flex flex-col items-center">
+          <img
+            src="img/2_dunit-removebg-preview.png"
+            alt="Batu Dunit"
+            class="w-20 sm:w-24 md:w-32"
+          />
+          <p class="mt-2 text-lg font-semibold text-white">Batu Dunit</p>
+        </div>
+      </div>
+
+      <!-- Tombol Scroll -->
+      <div class="flex items-center justify-center">
         <button
           id="scrollButton2"
-          class="bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg"
+          class="bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg hover:bg-green-700 transition duration-300"
         >
           700 Km
         </button>
       </div>
-      <div class="batuan">
-        <div class="batuan1">
-          <img
-            src="img/1_peridotit-removebg-preview.png"
-            alt="Batu peridotit"
-          />
-          <p>Batu Peridotit</p>
-        </div>
-        <div class="batuan2">
-          <img src="img/2_dunit-removebg-preview.png" alt="Batu Dunit" />
-          <p>Batu Dunit</p>
-        </div>
-      </div>
     </section>
+
     <br /><br /><br /><br /><br /><br /><br /><br /><br />
     <section
       id="p3"
@@ -164,33 +266,47 @@
         Selubung bumi atau yang biasa disebut mantel bumi ini merupakan lapisan
         yang menyelubungi inti bumi dan merupakan bagian terbesar dari bagian
         bumi sekitar 83.2 persen dari volume dan 67.8 persen dari keseluruhan
-        masa bumi. Terdiri dari material yang berfasa cair,sering pula selubung
+        masa bumi. Terdiri dari material yang berfasa cair, sering pula selubung
         bumi disebut sebagai lapisan astenosfer. Pada lapisan ini tempat
         terjadinya pergerakan-pergerakan lempeng-lempeng yang disebabkan oleh
         gaya konveksi atau energi dari panas bumi.
       </p>
-      <div class="flex items-center justify-center min-h-screen">
+
+      <!-- Batuan Lapisan Mantel -->
+      <div
+        class="grid grid-cols-2 gap-6 text-center mb-10 bg-gradient-to-b p-6 rounded-lg"
+      >
+        <div class="flex flex-col items-center">
+          <img
+            src="img/1_eklogite-removebg-preview.png"
+            alt="Batu Eklogite"
+            class="w-20 sm:w-24 md:w-32"
+          />
+          <p class="mt-2 text-lg font-semibold text-white">Batuan Eklogite</p>
+        </div>
+        <div class="flex flex-col items-center">
+          <img
+            src="img/2_bridgmanite-removebg-preview.png"
+            alt="Batu Bridgmanite"
+            class="w-20 sm:w-24 md:w-32"
+          />
+          <p class="mt-2 text-lg font-semibold text-white">
+            Batuan Bridgmanite
+          </p>
+        </div>
+      </div>
+
+      <!-- Tombol Scroll -->
+      <div class="flex items-center justify-center">
         <button
           id="scrollButton3"
-          class="bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg"
+          class="bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg hover:bg-green-700 transition duration-300"
         >
           2200 Km
         </button>
       </div>
-      <div class="batubatu">
-        <div class="batuanL31">
-          <img src="img/1_eklogite-removebg-preview.png" alt="Batu Eklogite" />
-          <p>Batuan Eklogite</p>
-        </div>
-        <div class="batuanL32">
-          <img
-            src="img/2_bridgmanite-removebg-preview.png"
-            alt="Batu Bridgmanite"
-          />
-          <p>Batuan Bridgmanite</p>
-        </div>
-      </div>
     </section>
+
     <br /><br /><br /><br /><br /><br /><br /><br /><br />
     <section
       id="p4"
@@ -205,25 +321,40 @@
         2.200 km, dan meskipun sangat panas, material dalam lapisan ini tetap
         dalam bentuk cair akibat tekanan yang tidak cukup untuk memadatkannya.
       </p>
-      <div class="flex items-center justify-center min-h-screen">
+
+      <!-- Batuan Lapisan Inti Luar -->
+      <div
+        class="grid grid-cols-2 gap-6 text-center mb-10 bg-gradient-to-b p-6 rounded-lg"
+      >
+        <div class="flex flex-col items-center">
+          <img
+            src="img/1_cairan_besi-removebg-preview.png"
+            alt="Cairan Besi"
+            class="w-20 sm:w-24 md:w-32"
+          />
+          <p class="mt-2 text-lg font-semibold text-white">Cairan Besi</p>
+        </div>
+        <div class="flex flex-col items-center">
+          <img
+            src="img/2_nikel-removebg-preview.png"
+            alt="Nikel"
+            class="w-20 sm:w-24 md:w-32"
+          />
+          <p class="mt-2 text-lg font-semibold text-white">Nikel</p>
+        </div>
+      </div>
+
+      <!-- Tombol Scroll -->
+      <div class="flex items-center justify-center">
         <button
           id="scrollButton4"
-          class="bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg"
+          class="bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg hover:bg-green-700 transition duration-300"
         >
           2900 Km
         </button>
       </div>
-      <div class="batubatubatu">
-        <div class="batuanL41">
-          <img src="img/1_cairan_besi-removebg-preview.png" alt="Cairan Besi" />
-          <p>Cairan Besi</p>
-        </div>
-        <div class="batuanL42">
-          <img src="img/2_nikel-removebg-preview.png" alt="Nikel" />
-          <p>Nikel</p>
-        </div>
-      </div>
     </section>
+
     <br /><br /><br /><br /><br /><br /><br /><br /><br />
     <section
       id="p5"
@@ -237,27 +368,42 @@
         sampai ke pusat bumi. Inti bumi dapat dipisahkan menjadi inti bumi
         bagian luar dan inti bumi bagian dalam. Batas antara selubung bumi dan
         inti bumi ditandai dengan penurunan kecepatan gelombang P secara drastis
-        dan gelombang S yang tidak diteruskan
+        dan gelombang S yang tidak diteruskan.
       </p>
-      <div class="flex items-center justify-center min-h-screen">
+
+      <!-- Batuan Lapisan Inti Dalam -->
+      <div
+        class="grid grid-cols-2 gap-6 text-center bg-gradient-to-b p-6 rounded-lg"
+      >
+        <div class="flex flex-col items-center">
+          <img
+            src="img/1_batuan_besi-removebg-preview.png"
+            alt="Batuan Besi"
+            class="w-20 sm:w-24 md:w-32"
+          />
+          <p class="mt-2 text-lg font-semibold text-white">Batuan Besi</p>
+        </div>
+        <div class="flex flex-col items-center">
+          <img
+            src="img/2_batuan_nikel-removebg-preview.png"
+            alt="Batuan Nikel"
+            class="w-20 sm:w-24 md:w-32"
+          />
+          <p class="mt-2 text-lg font-semibold text-white">Batuan Nikel</p>
+        </div>
+      </div>
+
+      <!-- Tombol Scroll Ke Atas -->
+      <div class="flex items-center justify-center mt-6">
         <button
           id="button5"
-          class="bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg"
+          class="bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg hover:bg-green-700 transition duration-300"
         >
-          Kembali Keatas
+          Kembali Ke Atas
         </button>
       </div>
-      <div class="batubatubatubatu">
-        <div class="batuanL51">
-          <img src="img/1_batuan_besi-removebg-preview.png" alt="Batuan Besi" />
-          <p>Batuan Besi</p>
-        </div>
-        <div class="batuanL52">
-          <img src="img/2_batuan_nikel-removebg-preview.png" alt="Nikel" />
-          <p>Batuan Nikel</p>
-        </div>
-      </div>
     </section>
+
     <script src="script.js"></script>
     <script src="home.js"></script>
   </body>

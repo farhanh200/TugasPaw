@@ -89,54 +89,6 @@ header {
   height: auto;
 }
 
-.navigation a {
-  color: #99bc85;
-  margin: 0 10px;
-  font-weight: 600;
-  text-decoration: none;
-  padding: 10px 15px;
-  transition: all 0.3s ease;
-}
-.navigation a:hover,
-.navigation a.active {
-  background: #99bc85;
-  color: white;
-  border-radius: 5px;
-}
-@media (max-width: 768px) {
-  header {
-    padding: 10px 20px;
-  }
-
-  .navbar-logo {
-    width: 40px;
-  }
-
-  .navigation {
-    gap: 10px;
-  }
-
-  .navigation a {
-    font-size: 14px;
-    padding: 5px 8px;
-  }
-}
-
-/* Untuk HP kecil (di bawah 480px) */
-@media (max-width: 480px) {
-  header {
-    padding: 8px 15px;
-  }
-
-  .navbar-logo {
-    width: 35px;
-  }
-
-  .navigation a {
-    font-size: 12px;
-    padding: 4px 6px;
-  }
-}
 @keyframes rotateSun {
   from {
     transform: rotate(0deg);
@@ -285,25 +237,6 @@ button::after {
     font-size: 14px;
   }
 }
-/*batu 1*/
-
-.batu1 {
-  position: absolute;
-  text-align: center;
-  font-weight: bold;
-  color: white;
-  background-color: transparent;
-  display: flex;
-  flex-wrap: wrap;
-}
-.batu1 img {
-  width: 80px;
-  height: auto;
-}
-.batu1 {
-  left: 15%;
-  top: 200%;
-}
 
 /* MEDIA QUERY UNTUK LAYAR KECIL */
 @media (max-width: 768px) {
@@ -318,99 +251,6 @@ button::after {
   #scrollButton1 {
     padding: 8px 16px;
     font-size: 14px;
-  }
-}
-/*batu 2*/
-.batu2 {
-  position: absolute;
-  text-align: center;
-  font-weight: bold;
-  color: white;
-  background-color: transparent;
-}
-.batu2 img {
-  width: 80px;
-  height: auto;
-}
-.batu2 {
-  left: 40%;
-  top: 200%;
-}
-/*batu 3*/
-.batu3 {
-  position: absolute;
-  text-align: center;
-  font-weight: bold;
-  color: white;
-  background-color: transparent;
-}
-.batu3 img {
-  width: 80px;
-  height: auto;
-}
-.batu3 {
-  left: 85%;
-  top: 200%;
-}
-/*batu 4*/
-.batu4 {
-  position: absolute;
-  text-align: center;
-  font-weight: bold;
-  color: white;
-  background-color: transparent;
-}
-.batu4 img {
-  width: 80px;
-  height: auto;
-}
-.batu4 {
-  left: 60%;
-  top: 200%;
-}
-/* MEDIA QUERY UNTUK TABLET */
-@media (max-width: 768px) {
-  .batu img {
-    width: 70px;
-  }
-  .batu1 {
-    left: 10%;
-    top: 220%;
-  }
-  .batu2 {
-    left: 35%;
-    top: 220%;
-  }
-  .batu3 {
-    left: 75%;
-    top: 220%;
-  }
-  .batu4 {
-    left: 50%;
-    top: 220%;
-  }
-}
-
-/* MEDIA QUERY UNTUK HP */
-@media (max-width: 480px) {
-  .batu img {
-    width: 60px;
-  }
-  .batu1 {
-    left: 5%;
-    top: 230%;
-  }
-  .batu2 {
-    left: 30%;
-    top: 230%;
-  }
-  .batu3 {
-    left: 65%;
-    top: 230%;
-  }
-  .batu4 {
-    left: 45%;
-    top: 230%;
   }
 }
 
@@ -460,67 +300,6 @@ button::after {
     font-size: 14px;
   }
 }
-/*batu1 lapisan 2*/
-.batuan1 {
-  position: absolute;
-  text-align: center;
-  font-weight: bold;
-  color: white;
-  background-color: transparent;
-}
-.batuan1 img {
-  width: 80px;
-  height: auto;
-}
-.batuan1 {
-  left: 60%;
-  top: 420%;
-}
-/*batu2 lapisan 2*/
-.batuan2 {
-  position: absolute;
-  text-align: center;
-  font-weight: bold;
-  color: white;
-  background-color: transparent;
-}
-.batuan2 img {
-  width: 80px;
-  height: auto;
-}
-.batuan2 {
-  left: 40%;
-  top: 420%;
-}
-/* MEDIA QUERY UNTUK TABLET */
-@media (max-width: 768px) {
-  .batuan img {
-    width: 70px;
-  }
-  .batuan1 {
-    left: 10%;
-    top: 450%;
-  }
-  .batuan2 {
-    left: 35%;
-    top: 450%;
-  }
-}
-
-/* MEDIA QUERY UNTUK HP */
-@media (max-width: 480px) {
-  .batuan img {
-    width: 60px;
-  }
-  .batuan1 {
-    left: 5%;
-    top: 465%;
-  }
-  .batuan2 {
-    left: 30%;
-    top: 465%;
-  }
-}
 
 /* MEDIA QUERY UNTUK LAYAR HP */
 @media (max-width: 768px) {
@@ -568,66 +347,7 @@ button::after {
     font-size: 14px;
   }
 }
-/*batuan lapisan 3*/
-.batuanL31 {
-  position: absolute;
-  text-align: center;
-  font-weight: bold;
-  color: white;
-  background-color: transparent;
-}
-.batuanL31 img {
-  width: 80px;
-  height: auto;
-}
-.batuanL31 {
-  left: 15%;
-  top: 600%;
-}
-.batuanL32 {
-  position: absolute;
-  text-align: center;
-  font-weight: bold;
-  color: white;
-  background-color: transparent;
-}
-.batuanL32 img {
-  width: 80px;
-  height: auto;
-}
-.batuanL32 {
-  left: 40%;
-  top: 600%;
-}
-/* MEDIA QUERY UNTUK TABLET */
-@media (max-width: 768px) {
-  .batubatu img {
-    width: 70px;
-  }
-  .batuanL31 {
-    left: 10%;
-    top: 660%;
-  }
-  .batuanL32 {
-    left: 35%;
-    top: 660%;
-  }
-}
 
-/* MEDIA QUERY UNTUK HP */
-@media (max-width: 480px) {
-  .batubatu img {
-    width: 60px;
-  }
-  .batuanL31 {
-    left: 5%;
-    top: 665%;
-  }
-  .batuanL32 {
-    left: 30%;
-    top: 665%;
-  }
-}
 /* MEDIA QUERY UNTUK LAYAR HP */
 @media (max-width: 768px) {
   #p4 {
@@ -674,66 +394,7 @@ button::after {
     font-size: 14px;
   }
 }
-/*batuan lapisan 4*/
-.batuanL41 {
-  position: absolute;
-  text-align: center;
-  font-weight: bold;
-  color: white;
-  background-color: transparent;
-}
-.batuanL41 img {
-  width: 80px;
-  height: auto;
-}
-.batuanL41 {
-  left: 15%;
-  top: 800%;
-}
-.batuanL42 {
-  position: absolute;
-  text-align: center;
-  font-weight: bold;
-  color: white;
-  background-color: transparent;
-}
-.batuanL42 img {
-  width: 80px;
-  height: auto;
-}
-.batuanL42 {
-  left: 40%;
-  top: 800%;
-}
-/* MEDIA QUERY UNTUK TABLET */
-@media (max-width: 768px) {
-  .batubatubatu img {
-    width: 70px;
-  }
-  .batuanL41 {
-    left: 10%;
-    top: 850%;
-  }
-  .batuanL42 {
-    left: 35%;
-    top: 850%;
-  }
-}
 
-/* MEDIA QUERY UNTUK HP */
-@media (max-width: 480px) {
-  .batubatubatu img {
-    width: 60px;
-  }
-  .batuanL41 {
-    left: 5%;
-    top: 865%;
-  }
-  .batuanL42 {
-    left: 30%;
-    top: 865%;
-  }
-}
 /* MEDIA QUERY UNTUK LAYAR HP */
 @media (max-width: 768px) {
   #p5 {
@@ -780,66 +441,7 @@ button::after {
     font-size: 14px;
   }
 }
-/*batuan lapisan 5*/
-.batuanL51 {
-  position: absolute;
-  text-align: center;
-  font-weight: bold;
-  color: white;
-  background-color: transparent;
-}
-.batuanL51 img {
-  width: 80px;
-  height: auto;
-}
-.batuanL51 {
-  left: 15%;
-  top: 980%;
-}
-.batuanL52 {
-  position: absolute;
-  text-align: center;
-  font-weight: bold;
-  color: white;
-  background-color: transparent;
-}
-.batuanL52 img {
-  width: 80px;
-  height: auto;
-}
-.batuanL52 {
-  left: 40%;
-  top: 980%;
-}
-/* MEDIA QUERY UNTUK TABLET */
-@media (max-width: 768px) {
-  .batubatubatubatu img {
-    width: 70px;
-  }
-  .batuanL51 {
-    left: 10%;
-    top: 1040%;
-  }
-  .batuanL52 {
-    left: 35%;
-    top: 1040%;
-  }
-}
 
-/* MEDIA QUERY UNTUK HP */
-@media (max-width: 480px) {
-  .batubatubatubatu img {
-    width: 60px;
-  }
-  .batuanL51 {
-    left: 5%;
-    top: 1050%;
-  }
-  .batuanL52 {
-    left: 30%;
-    top: 1050%;
-  }
-}
 .dropdown {
   position: relative;
   display: inline-block;
