@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lapisan Bumi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="img/earth.png" type="imagr/icon" />
+  </head>
+  <body class="text-gray-900">
+    <!-- Header -->
+    <header>
+      <a id="navbar" href="#">
+        <img src="img/earth.png" alt="Logo" class="navbar-logo" />
+      </a>
+
+      <nav class="navigation">
+        <a href="home.html">Home</a>
+        <a href="index.html">Lapisan Bumi</a>
+        <div class="dropdown">
+          <a href="Evaluasi/evaluasi.html" id="dropdown-btn" class="dropbtn"
+            >Other</a
+          >
+          <div class="dropdown-content" id="dropdown-menu">
+            <a href="Evaluasi/minigame/">Mini Game</a>
+            <a href="Evaluasi/Quiz/">Quiz</a>
+          </div>
+        </div>
+        <a href="nama.html" class="active">About us</a>
+      </nav>
+    </header>
+    <style>
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 20px;
+        padding: 20px;
+      }
+
+      .card {
+        width: calc(50% - 10px);
+        background: white;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+    <br /><br /><br /><br /><br /><br /><br /><br />
+    <div class="container">
+      <div class="card">
+        <img src="img/elsa1.jpg" alt="Foto 1" />
+        <h3>Elsa Dwi Setianingsih</h3>
+        <p>NIM: 235176004</p>
+        <p>
+          "I live life like a flowing river—flexible, ever-moving forward. But
+          when I feel stuck, I reset my mind, upgrade my skills, and adapt.".
+        </p>
+      </div>
+      <div class="card">
+        <img src="img/IMG_1207.JPG" alt="Foto 2" />
+        <h3>Farhan Hakim</h3>
+        <p>NIM: 2305176013</p>
+        <p>
+          "Keep going. Everything you need will come to you at the right time."
+        </p>
+      </div>
+      <div class="card">
+        <img src="img/yunita.jpg" alt="Foto 3" />
+        <h3>Yunita Takarina</h3>
+        <p>NIM: 2305176038</p>
+        <p>
+          "Challenges are gifts that force us to seek new centers of gravity.
+          Don't fight them. Just find new ways to stand."
+        </p>
+      </div>
+      <div class="card">
+        <img src="img/christy.jpg" alt="Foto 4" />
+        <h3>Maria Meryana Christy Sidharta</h3>
+        <p>NIM: 2305176007</p>
+        <p>"don't be afraid to try, do it like there's no tomorrow.""</p>
+      </div>
+    </div>
+    <script src="home.js"></script>
+  </body>
+</html>
